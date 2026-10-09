@@ -3,7 +3,7 @@ function ProductModal({ product, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
@@ -36,7 +36,7 @@ function ProductModal({ product, onClose }) {
           </div>
 
           <h3 className="text-2xl font-bold text-slate-900">{product.name}</h3>
-          <p className="text-slate-600 leading-relaxed">{product.description}</p>
+          <p className="text-slate-600 leading-relaxed whitespace-pre-line">{product.description}</p>
         </div>
       </div>
     </div>

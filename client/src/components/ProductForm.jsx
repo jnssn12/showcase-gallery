@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ImageUpload from "./ImageUpload";
 
-const emptyForm = { name: "", price: "", category: "Electronics", description: "", image: "" };
+const emptyForm = { name: "", price: "", category: "Airplane", description: "", image: "" };
 const inputClass =
   "w-full rounded-xl border border-slate-300 px-4 py-3 outline-none " +
   "transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100";
@@ -29,7 +29,7 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
       await onSubmit({
         name: name.trim(),
         price: Number(price),
-        category: category.trim() || "General",
+        category: category?.trim() || "General",
         description,
         image,
       });
@@ -78,11 +78,11 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
         onChange={handleChange}
         className={inputClass}
       >
-        <option value="Electronics">Electronics</option>
-        <option value="Lifestyle">Lifestyle</option>
-        <option value="Accessories">Accessories</option>
-        <option value="Home & Office">Home & Office</option>
-        <option value="General">General</option>
+        <option value="Airbus">Airbus</option>
+        <option value="Boeing">Boeing</option>
+        <option value="Embraer">Embraer</option>
+        <option value="ATR">ATR</option>
+        <option value="Bombardier">Bombardier</option>
       </select>
       <textarea
         name="description"

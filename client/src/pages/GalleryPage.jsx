@@ -57,7 +57,7 @@ function GalleryPage({ products = [], loading }) {
               onChange={(e) => setSearch(e.target.value)}
               className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 pl-10 text-sm shadow-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
             />
-            <span className="absolute left-3.5 top-3.5 text-slate-400">🔍</span>
+            <span className="absolute left-3.5 top-3.5 text-slate-400"></span>
           </div>
 
           <select

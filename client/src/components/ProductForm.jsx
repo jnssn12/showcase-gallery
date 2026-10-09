@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ImageUpload from "./ImageUpload";
 
-const emptyForm = { name: "", price: "", category: "Airplane", description: "", image: "" };
+const emptyForm = { name: "", price: "", category: "Airbus", description: "", image: "" };
 const inputClass =
   "w-full rounded-xl border border-slate-300 px-4 py-3 outline-none " +
   "transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100";
@@ -29,7 +29,7 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
       await onSubmit({
         name: name.trim(),
         price: Number(price),
-        category: category?.trim() || "General",
+        category: category?.trim() || "Airbus",
         description,
         image,
       });
